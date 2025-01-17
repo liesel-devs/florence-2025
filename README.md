@@ -8,7 +8,7 @@ Materials for the Workshop on Bayesian Semiparametric Distributional Regression 
 **Tuesday, 11 February 2025**: Fundamentals of Bayesian Inference
 
 ```
-9:00 - 10:30 Lecture 1
+09:00 - 10:30 Lecture 1
 10:30 - 11:00 Coffee Break
 11:00 - 12:30 Lecture 2
 
@@ -22,7 +22,7 @@ Materials for the Workshop on Bayesian Semiparametric Distributional Regression 
 **Wednesday, 12 February 2025**: Semiparametric Regression with Structured Additive Predictors
 
 ```
-9:00 - 10:30 Lecture 1
+09:00 - 10:30 Lecture 1
 10:30 - 11:00 Coffee Break
 11:00 - 12:30 Lecture 2
 
@@ -37,7 +37,7 @@ Materials for the Workshop on Bayesian Semiparametric Distributional Regression 
 **Thursday, 13 February 2025**: Distributional Regression Models
 
 ```
-9:00 - 10:30 Lecture 1
+09:00 - 10:30 Lecture 1
 10:30 - 11:00 Coffee Break
 11:00 - 12:30 Lecture 2
 
