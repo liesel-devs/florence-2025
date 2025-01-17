@@ -31,13 +31,15 @@ This workshop provides an overview of key statistical modeling approaches, start
 ## Prerequisites
 
 - Please bring a **laptop**, so that you can actively work on the tutorials.
+- On your laptop, you should have a recent version of R and RStudio installed.
 - Prior programming experience:
   - You will need experience in R for the practicals of Day 1.
   - For the practicals of the Days 2 and 3, wee offer two versions:
-    - R version: Relies on the R package [`bamlss`](https://cran.r-project.org/web/packages/bamlss/vignettes/bamlss.html). This package is a great starting point for users familiar with R who want to apply Bayesian Semiparametric Distribtional Regression models.
-    - Python version: Relies on the Python library [`liesel`](https://liesel-project.org). This library is our own development, and is our method of choice for developing new Bayesian models. Beware that the initial learning curve is higher than for `bamlss`, and that Liesel offers less convenience functionality out of the box.
-- On your laptop, you should have a recent version of R and RStudio installed.
-- If you want to work on the Python exercises, we recommend to use [Google Colab](https://colab.research.google.com). Of course, you are free to use your own local Python installation. For details, see below.
+  - R version: Relies on the R package [`bamlss`](https://cran.r-project.org/web/packages/bamlss/vignettes/bamlss.html). This package is a great starting point for users familiar with R who want to apply Bayesian Semiparametric Distribtional Regression models.
+  - Python version: Relies on the Python library [`liesel`](https://liesel-project.org). This library is our own development, and is our method of choice for developing new Bayesian models. Beware that the initial learning curve is higher than for `bamlss`, and that Liesel offers less convenience functionality out of the box.
+- If you want to work on the Python exercises, we recommend to use [Google Colab](https://colab.research.google.com). Of course, you are free to use your own local Python installation, in which case we recommend the use of [Jupyter notebooks](https://jupyter.org). For details, see below.
+
+
 
 ## Schedule
 
