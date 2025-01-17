@@ -11,7 +11,9 @@ Materials for the Workshop on Bayesian Semiparametric Distributional Regression 
 9:00 - 10:30 Lecture 1
 10:30 - 11:00 Coffee Break
 11:00 - 12:30 Lecture 2
+
 12:30 - 14:00 Lunch Break
+
 14:00 - 15:30 Practicals 1
 15:30 - 16:00 Coffee Break
 16:00 - 17:00 Practicals 2
@@ -23,7 +25,9 @@ Materials for the Workshop on Bayesian Semiparametric Distributional Regression 
 9:00 - 10:30 Lecture 1
 10:30 - 11:00 Coffee Break
 11:00 - 12:30 Lecture 2
+
 12:30 - 14:00 Lunch Break
+
 14:00 - 15:30 Practicals 1
 15:30 - 16:00 Coffee Break
 16:00 - 17:00 Practicals 2
@@ -36,7 +40,9 @@ Materials for the Workshop on Bayesian Semiparametric Distributional Regression 
 9:00 - 10:30 Lecture 1
 10:30 - 11:00 Coffee Break
 11:00 - 12:30 Lecture 2
+
 12:30 - 14:00 Lunch Break
+
 14:00 - 15:30 Practicals 1
 15:30 - 16:00 Coffee Break
 16:00 - 17:00 Practicals 2
