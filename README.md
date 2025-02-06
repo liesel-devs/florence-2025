@@ -120,6 +120,6 @@ pip install rpy2
 ## Support and Collaboration
 
 - We are happy to support your work with Bayesian Distributional Regression! Please feel free to approach us with questions.
-- You can contact the Liesel development team via `liesel-devs@lists.uni-goettingen.de`
+- You can contact the Liesel development team via `liesel@uni-goettingen.de`
 - Please also feel encouraged to ask questions on our discussion board: <https://github.com/liesel-devs/liesel/discussions>
 - Liesel documentation: <https://docs.liesel-project.org/en/latest/>
