@@ -134,6 +134,7 @@ Errata in the R-solutions to exercises 3 and 4.
 1. HMC
     1. We did not compute the sum for the joint log density of proposed and current momentum in acceptance probability.
     2. Used the wrong "current" momentum in the acceptance probability. We should use the newly drawn momentum in each iteration. We used the final momentum from the previous iteration.
+    3. The last half-step of updating the momentum in the leapfrog algorithm should be omitted, but we still included it.
 2. IWLS
     1. We used the wrong means to evaluate the proposal densities in the acceptance probability. Specifically, we used the proposed and current parameter values, but we should have used the actual means for the forward and backward proposal distributions, which include the negative hessian and the gradient of the log posterior.
 3. The negative hessian function `F_fn` contained errors.
