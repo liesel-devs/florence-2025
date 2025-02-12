@@ -217,3 +217,42 @@ acf(beta[,2])
 # estimates
 colMeans(beta)
 apply(beta, 2, sd) 
+
+
+# --------------------------------------------------------------------------- #
+# Comparison to package implementation in hmclearn
+# --------------------------------------------------------------------------- #
+
+
+logp <- function(beta) {
+    log_posterior(
+        beta,
+        y=dat$y,
+        x=dat$x,
+        sigma=sqrt(3),
+        prior_mean=0,
+        prior_sd=10
+    )
+}
+
+log_deriv <- function(beta) {
+    log_posterior_deriv(y=dat$y, x=dat$x, beta=beta, sigma=sqrt(3), prior_sd=10)
+}
+
+res <- hmclearn::hmc(
+    N=10000,
+    theta.init = c(0,0),
+    epsilon = 0.01,
+    L = 10,
+    logPOSTERIOR = logp,
+    glogPOSTERIOR = log_deriv,
+    randlength = FALSE,
+    Mdiag = c(1,1),
+    verbose = FALSE
+)
+
+res |> summary()
+
+res$accept_v[[1]] |> mean()
+
+res$thetaCombined[[1]][500:10000,] |> apply(2, sd)
