@@ -86,7 +86,9 @@ hmc_step <- function(beta_proposed, beta_current, momentum_proposed, momentum_cu
     # implement the acceptance step
     if(accept) {
         beta_step <- beta_proposed
-        momentum_step <- -momentum_proposed
+        # if accepted, negate the momentum
+        # this is practically irrelevant, but part of the theory
+        momentum_step <- -momentum_proposed 
     } else {
         beta_step <- beta_current
         momentum_step <- momentum_current
@@ -118,19 +120,23 @@ hmc <- function(
     # initialize with the starting values
     beta_current <- beta_start
     
-    # assumes that the mass matrix will always be diagonal
-    momentum_current <- rnorm(n = nparam, sd = sqrt(diag(mass_matrix)))
     
     # perform MCMC iterations
     for (m in seq(nsamples)) {
+        
+        # draw new momentum
+        # assumes that the mass matrix will always be diagonal
+        momentum_current <- rnorm(n = nparam, sd = sqrt(diag(mass_matrix)))
+        
         # Leapfrog steps
-        momentum_leapfrog <- rnorm(n = nparam, sd = sqrt(diag(mass_matrix)))
+        momentum_leapfrog <- momentum_current
         beta_leapfrog <- beta_current
         
         for (l in seq(number_steps)) {
             momentum_leapfrog <- momentum_leapfrog + (step_size / 2) * log_posterior_deriv(y, x, beta_leapfrog, sigma, prior_sd)
             beta_leapfrog <- beta_leapfrog + step_size * Minv %*% momentum_leapfrog
-            if (l < number_steps) {
+            
+            if (l < number_steps) { # omit the last momentum update
                 momentum_leapfrog <- momentum_leapfrog + (step_size / 2) * log_posterior_deriv(y, x, beta_leapfrog, sigma, prior_sd)
             }
         }
@@ -173,10 +179,11 @@ samples <- hmc(
     dat$y,
     dat$x,
     beta_start = c(0, 0),
-    nsamples = 10000,
+    nsamples = 1000,
     sigma = sqrt(3), # this is a parameter of the response distribution; we assume it to be fixed here
     prior_sd = 10,
-    step_size = 0.1
+    step_size = 0.01,
+    number_steps = 10
 )
 
 # acceptance probability
