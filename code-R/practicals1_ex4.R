@@ -26,6 +26,8 @@ log_posterior <- function(beta, y, x, sigma, prior_mean, prior_sd) {
 # IWLS acceptance step
 mh_step_iwls <- function(beta_proposed, beta_current, y, x, sigma, prior_mean, prior_sd, Finv) {
     
+    X <- cbind(1, x)
+    
     # compute log-posterior at proposed value
     log_prob_proposal <- log_posterior(
         beta_proposed,
